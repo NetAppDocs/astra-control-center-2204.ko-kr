@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: release-notes/known-issues-ads.html 
+keywords: astra, control center, ads, data store, bugs, known issues, problems 
+summary: 알려진 문제점은 이 제품 릴리스를 성공적으로 사용하지 못하게 만들 수 있는 문제를 식별합니다. 
+---
+= Astra Data Store 및 이 Astra Control Center 릴리스와 관련된 알려진 문제입니다
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/release-notes/
+
+
+알려진 문제점은 이 제품 릴리스를 성공적으로 사용하지 못하게 만들 수 있는 문제를 식별합니다.
+
+https://docs.netapp.com/us-en/astra-data-store/release-notes/known-issues.html["이러한 알려진 문제를 참조하십시오"] 이 문제는 Astra Control Center의 현재 릴리즈와 함께 Astra Data Store의 관리에 영향을 미칠 수 있습니다.
+
+
+
+== 자세한 내용을 확인하십시오
+
+* link:../release-notes/known-issues.html["알려진 문제"]
+* link:../release-notes/known-limitations.html["알려진 제한 사항"]
+
