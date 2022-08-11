@@ -1059,7 +1059,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-08-03 21:11:12 +0000">08/03/2022</time>
+    <time datetime="2022-08-11 17:12:17 +0000">08/11/2022</time>
     
   
 
@@ -1074,83 +1074,10 @@
 <div class="paragraph">
 <p>먼저 해 <a href="../get-started/setup_overview.html#add-cluster">"Astra Control 관리에 클러스터를 추가합니다"</a>, 클러스터(Astra Control 외부)에 앱을 설치한 다음, Astra Control의 앱 페이지로 이동하여 앱과 리소스 관리를 시작할 수 있습니다.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="설명합니다">설명합니다</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>Astra Control에는 다음과 같은 앱 관리 요구 사항이 있습니다.</p>
+<p>자세한 내용은 을 참조하십시오 <a href="../get-started/requirements.html#application-management-requirements">"설명합니다"</a>.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>* 라이선스 *: Astra Control Center를 사용하여 앱을 관리하려면 Astra Control Center 라이센스가 필요합니다.</p>
-</li>
-<li>
-<p>* Namespaces *: Astra Control은 앱이 단일 네임스페이스 이상의 범위를 포괄하지 않도록 하지만 네임스페이스에는 여러 개의 앱이 포함될 수 있습니다.</p>
-</li>
-<li>
-<p>* StorageClass *: StorageClass가 명시적으로 설정된 앱을 설치하고 앱을 복제해야 하는 경우 클론 작업의 타겟 클러스터에 원래 지정된 StorageClass가 있어야 합니다. 명시적으로 StorageClass를 동일한 StorageClass가 없는 클러스터로 설정한 애플리케이션을 클론 복제하면 실패합니다.</p>
-</li>
-<li>
-<p>* Kubernetes 리소스 *: Astra Control에서 수집하지 않은 Kubernetes 리소스를 사용하는 앱에는 전체 앱 데이터 관리 기능이 없을 수 있습니다. Astra Control은 다음과 같은 Kubernetes 리소스를 수집합니다.</p>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">클러스터 역할</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ClusterRoleBinding 을 참조하십시오</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ConfigMap을 클릭합니다</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 지정 리소스 정의</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CustomResource 를 선택합니다</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">경작업</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DemonSet</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HorizontalPodAutoscaler</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">침투</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DeploymentConfig(배포 구성</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">뮤atingWebhook</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">PersistentVolumeClaim</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">포드</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">팟캐스트 예산</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">팟캐스트 템플릿</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">네트워크 정책</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ReplicaSet입니다</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">역할</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">RoleBinding 을 클릭합니다</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">루트</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">비밀</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">서비스</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">서비스 계정</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">StatefulSet 을 선택합니다</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Webhook을 확인합니다</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</li>
-</ul>
+</div>
 </div>
 <div class="sect2">
 <h3 id="지원되는-앱-설치-방법">지원되는 앱 설치 방법</h3>
@@ -1202,8 +1129,6 @@
 </td>
 </tr>
 </table>
-</div>
-</div>
 </div>
 </div>
 <div class="sect1">
