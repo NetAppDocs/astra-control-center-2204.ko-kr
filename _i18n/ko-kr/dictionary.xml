@@ -154,7 +154,6 @@
   <block id="ff66234381e2d5213adaf96c742cb4c3" category="paragraph">또한 Astra Control Center를 사용하면 VM 환경 내에서 실행 중인 Kubernetes 클러스터를 관리, 마이그레이션 및 보호할 수 있습니다.</block>
   <block id="0ec24420f91223b35f271fb4a5f65f2f" category="summary">Astra Control Center를 사용하여 수행할 수 있는 작업은 라이센스 상태에 따라 어떻게 다르며, Astra Control Center를 사용하는 경우 라이센스 소모에 어떤 영향을 미치는지 알아보십시오.</block>
   <block id="0b9c6eef4e3d3a222eb04e910d252339" category="doc">라이센싱</block>
-  <block id="61ac76bdcf47d387dfb9efb8d39ce1d9" category="paragraph">Astra Control Center를 사용하려면 라이센스를 설치해야 전체 애플리케이션 데이터 관리 기능을 사용할 수 있습니다. 라이센스 없이 Astra Control Center를 배포하는 경우, 시스템 기능이 제한된다는 경고 메시지가 웹 UI에 표시됩니다.</block>
   <block id="23c455802681d71fa7b93cceb849af79" category="paragraph">다음 작업을 수행하려면 유효한 라이센스가 필요합니다.</block>
   <block id="866b10bb84f65c6e8641ad5e4d19560e" category="list-text">새로운 애플리케이션 관리</block>
   <block id="aba42bf1b2c7c8728d1d2b28ff0070bd" category="list-text">스냅샷 또는 백업을 생성하는 중입니다</block>
@@ -2261,4 +2260,5 @@
   <block id="1d79052461351a56ef4f9bf9f5837f4a" category="sidebar">REST API를 사용하여 자동화</block>
   <block id="0b79795d3efc95b9976c7c5b933afce2" category="sidebar">소개</block>
   <block id="d1736d27c7efe09a7fdb5f5e3b18e8dc" category="paragraph">자세한 내용은 을 참조하십시오 <block ref="f6d2e41142da7ccda158b71b34630966" category="inline-link-macro-rx"></block>.</block>
+  <block id="7710790456945bed9a23fff9f934b8fd" category="paragraph">Astra Control Center는 전체 앱 데이터 관리 기능을 사용하려면 라이센스를 설치해야 합니다. 라이센스 없이 Astra Control Center를 배포하는 경우, 시스템 기능이 제한된다는 경고 메시지가 웹 UI에 표시됩니다.</block>
 </blocks>
