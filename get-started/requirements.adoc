@@ -220,6 +220,8 @@ Astra Control Center를 사용해 보고 싶다면 가능합니다 link:setup_ov
 
 NOTE: Tanzu Kubernetes Grid 클러스터에서 Astra Control Center를 호스팅하는 경우 "kubbtl get nsxlbmonitor -a" 명령을 사용하여 수신 트래픽을 허용하도록 구성된 서비스 모니터가 있는지 확인하십시오. 기존 서비스 모니터가 새 로드 밸런서 구성을 무시하므로 MetalLB를 설치하면 안 됩니다.
 
+자세한 내용은 을 참조하십시오 link:../get-started/install_acc.html#set-up-ingress-for-load-balancing["부하 분산을 위한 수신 설정"].
+
 
 
 == 네트워킹 요구 사항

@@ -2261,4 +2261,5 @@
   <block id="0b79795d3efc95b9976c7c5b933afce2" category="sidebar">소개</block>
   <block id="d1736d27c7efe09a7fdb5f5e3b18e8dc" category="paragraph">자세한 내용은 을 참조하십시오 <block ref="f6d2e41142da7ccda158b71b34630966" category="inline-link-macro-rx"></block>.</block>
   <block id="7710790456945bed9a23fff9f934b8fd" category="paragraph">Astra Control Center는 전체 앱 데이터 관리 기능을 사용하려면 라이센스를 설치해야 합니다. 라이센스 없이 Astra Control Center를 배포하는 경우, 시스템 기능이 제한된다는 경고 메시지가 웹 UI에 표시됩니다.</block>
+  <block id="558e41f71155360e3f8ee151e27ea06f" category="paragraph">자세한 내용은 을 참조하십시오 <block ref="ad125f0a3036e9b5f57b3a7077f489d9" category="inline-link-macro-rx"></block>.</block>
 </blocks>
