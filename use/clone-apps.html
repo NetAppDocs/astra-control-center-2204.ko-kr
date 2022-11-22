@@ -25,39 +25,42 @@
   <!-- Elastic Search -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
 
-  <!-- Controls AsciiDoctor Admonition Blocks -->
-  <link rel="stylesheet" type="text/css" href="/ko-kr/astra-control-center-2204/css/font-awesome.min.css">
-
-  <!-- Controls the shadow effect for search dropdown menu -->
-  <link rel="stylesheet" href="/ko-kr/astra-control-center-2204/css/boxshadowproperties.css">
-
-  <!-- NetApp CSS controls the technical content -->
-  <link rel="stylesheet" type="text/css" href="/ko-kr/astra-control-center-2204/css/netapp.css">
-
-  <!-- WWW CSS Content -->
-  <link rel="stylesheet" type="text/css" href="/ko-kr/astra-control-center-2204/css/www-luci-dotcom.min.css">
-  <link rel="stylesheet" type="text/css" href="/ko-kr/astra-control-center-2204/css/www-netapp-dotcom.css">
-  <link rel="stylesheet" href="/ko-kr/astra-control-center-2204/css/www-netapp-library-critical.min.css" media="all" >
-  <link rel="stylesheet" href="/ko-kr/astra-control-center-2204/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="stylesheet" href="/ko-kr/astra-control-center-2204/css/www-netapp-library-global-header-footer.min.css">
-
-  <!-- NetApp IE Customizations -->
-  <link rel="stylesheet" href='/ko-kr/astra-control-center-2204/css/na-utility.css' type='text/css'>
-  <link rel="stylesheet" href='/ko-kr/astra-control-center-2204/css/na-sidebar.css' type='text/css'>
-  <link rel='stylesheet' href='/ko-kr/astra-control-center-2204/css/clouddocs.css' type='text/css'>
-  <link rel='stylesheet' href='/ko-kr/astra-control-center-2204/css/custom-dropdown.css' type='text/css'>
-  <link rel='stylesheet' href='/ko-kr/astra-control-center-2204/css/na-pagenav.css' type='text/css'>
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/ko-kr/astra-control-center-2204/css/netappdocs.css">
 
   
   <link rel="stylesheet" href="/ko-kr/astra-control-center-2204/css/landing-page.css" type="text/css">
   <link rel="stylesheet" href="/ko-kr/astra-control-center-2204/css/tabbed-blocks.css" type="text/css">
   <!-- Canonical url -->
   <link rel='stylesheet' href='/ko-kr/astra-control-center-2204/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
-    if (document.location.hostname === "docs.netapp.com") {
+    function addAdobeLaunch(adobeId) {
+      var head = document.getElementsByTagName('head')[0];
+      var adobe = document.createElement("script");
+      adobe.type = "text/plain";
+      adobe.className = "optanon-category-C0002";
+      adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/"+adobeId+".min.js";
+      head.appendChild(adobe);
+    }
+
+    function addGoogleAnalytics(gtagId) {
+      var google = document.createElement("script");
+      google.type = "text/plain";
+      google.className = "optanon-category-C0002";
+      google.src = "https://www.googletagmanager.com/gtag/js?id="+gtagId;
+      var head = document.getElementsByTagName('head')[0];
+      head.appendChild(google);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', gtagId);
+    }
+
+    function addConsent(consentId) {
       var head = document.getElementsByTagName('head')[0];
       var onetrustConsent = document.createElement("script");
       onetrustConsent.type = "text/javascript";
-      onetrustConsent.src = "https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js";
+      onetrustConsent.src = "https://cdn.cookielaw.org/consent/"+consentId+"/OtAutoBlock.js";
       head.appendChild(onetrustConsent);
 
       var onetrustScript = document.createElement("script");
@@ -65,40 +68,17 @@
       onetrustScript.src = "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js";
       onetrustScript.charset = "UTF-8";
       onetrustScript.dataset.documentLanguage = "true";
-      onetrustScript.dataset.domainScript = "72570c5c-fe30-465f-b0e0-b77f7fb4ae34";
+      onetrustScript.dataset.domainScript = consentId;
       head.appendChild(onetrustScript);
-    }
-
-    function OptanonWrapper() { }
-
-    if (document.location.hostname === "docs.netapp.com") {
-      var adobe = document.createElement("script");
-      adobe.type = "text/plain";
-      adobe.className = "optanon-category-C0002";
-      adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
-      head.appendChild(adobe);
-
-      var google = document.createElement("script");
-      google.type = "text/plain";
-      google.className = "optanon-category-C0002";
-      google.src = "https://www.googletagmanager.com/gtag/js?id=UA-81697994-3";
-      head.appendChild(google);
-
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-81697994-3');
-    }
+    }addConsent("72570c5c-fe30-465f-b0e0-b77f7fb4ae34");
+    addAdobeLaunch("launch-e9ff3acac59f");
+    addGoogleAnalytics("UA-81697994-3");function OptanonWrapper() { }
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 
   <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/ko-kr/astra-control-center-2204/js/na-search.js'></script><script src='/ko-kr/astra-control-center-2204/js/na-pagenav.js'></script><link rel='stylesheet' href='/ko-kr/astra-control-center-2204/css/prism.css' type='text/css'>
-  <link rel='stylesheet' href='/ko-kr/astra-control-center-2204/css/prism-netapp.css' type='text/css'>
-
-
-  <script src='/ko-kr/astra-control-center-2204/js/na-utility.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/ko-kr/astra-control-center-2204/js/na-search.js'></script><script src='/ko-kr/astra-control-center-2204/js/na-pagenav.js'></script><script src='/ko-kr/astra-control-center-2204/js/na-utility.js'></script>
   <script src='/ko-kr/astra-control-center-2204/js/clouddocs.js'></script>
   <script src='/ko-kr/astra-control-center-2204/js/jquery.navgoco.min.js'></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -139,6 +119,17 @@
               $("#mysidebar").navgoco('toggle', true);
           });
 
+          $(".sidebar-nav-container").on("scroll", function() {
+            $.cookie("sidebarScroll", $(".sidebar-nav-container").scrollTop(), {
+              path    : "/ko-kr/astra-control-center-2204"  
+            });
+          });
+          $(function() {
+            if ($.cookie("sidebarScroll")) {
+              $(".sidebar-nav-container").scrollTop($.cookie("sidebarScroll"));
+            }
+          });
+
       });
 
   </script>
@@ -169,7 +160,45 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/astra-control-center-2204/issues/new?body=Page%3A%20[애플리케이션 클론 복제 및 마이그레이션](https://docs.netapp.com/ko-kr/astra-control-center-2204/use/clone-apps.html)" class="page-nav-contribute-link" role="button"><img src="/ko-kr/astra-control-center-2204/images/discuss-sm.svg" alt="" class="github-icon" />문서 변경 요청</a><a target="_blank" href="https://github.com/NetAppDocs/astra-control-center-2204/blob/main/use/clone-apps.adoc" class="page-nav-contribute-link" role="button"><img src="/ko-kr/astra-control-center-2204/images/edit-sm.svg" alt="" class="github-icon" />이 페이지 편집</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ko-kr/astra-control-center-2204/images/article-sm.svg" alt="" class="github-icon" />기여하는 방법 자세히 알아보기</a></div>
+  <div class="page-nav-toolbar"><div id="version-dropdown-new" class="custom-dropdown" >
+  <div class="custom-dropdown-select unselected" title="Astra 제어 센터 22.04">
+    <label>버전</label>
+    <span translate="no" class="notranslate">Astra 제어 센터 22.04</span>
+    <img src="/ko-kr/astra-control-center-2204/images/chevron_up.svg" alt="" class="custom-icon chevrondown invisible" />
+    <img src="/ko-kr/astra-control-center-2204/images/chevron_down.svg" alt="" class="custom-icon chevronup" />
+  </div>
+
+  <ul class="custom-dropdown-menu"><li>
+      
+      <a href="https://docs.netapp.com/ko-kr/astra-control-center-2204/use/clone-apps.html" target="_self">
+        <span translate="no" class="notranslate"><span>Astra 제어 센터</span><span class="version"> 22.04</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/ko-kr/astra-control-center/use/clone-apps.html" target="_self">
+        <span translate="no" class="notranslate"><span>Astra 제어 센터</span><span class="version"> 22.08</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/ko-kr/astra-control-center-2112/use/clone-apps.html" target="_self">
+        <span translate="no" class="notranslate"><span>Astra 제어 센터</span><span class="version"> 21.12</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/ko-kr/astra-control-center-2108/use/clone-apps.html" target="_self">
+        <span translate="no" class="notranslate"><span>Astra 제어 센터</span><span class="version"> 21.08</span></span>
+      </a>
+                     
+    </li>
+    
+  </ul>
+</div><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/astra-control-center-2204/issues/new?body=Page%3A%20[애플리케이션 클론 복제 및 마이그레이션](https://docs.netapp.com/ko-kr/astra-control-center-2204/use/clone-apps.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/ko-kr/astra-control-center-2204/images/discuss-sm.svg" alt="" class="github-icon" />문서 변경 요청</a><a target="_blank" href="https://github.com/NetAppDocs/astra-control-center-2204/blob/main/use/clone-apps.adoc" class="page-nav-contribute-link" role="button"><img src="/ko-kr/astra-control-center-2204/images/edit-sm.svg" alt="" class="github-icon" />이 페이지 편집</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ko-kr/astra-control-center-2204/images/article-sm.svg" alt="" class="github-icon" />기여하는 방법 자세히 알아보기</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">이 페이지의 내용</div>
@@ -253,6 +282,8 @@
       </div>
 
       
+      
+      
       <div class="search-property-bar">
         <div id="search-demo-container" class="searchbox n-property-bar__search">
           <div id="react-search" 
@@ -299,6 +330,10 @@
           <a href="https://docs.netapp.com/zh-cn/astra-control-center-2204/use/clone-apps.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
         </li><li>
           <a href="https://docs.netapp.com/zh-tw/astra-control-center-2204/use/clone-apps.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/fr-fr/astra-control-center-2204/use/clone-apps.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/de-de/astra-control-center-2204/use/clone-apps.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
         </li></ul>
     </div><!-- End Language Selector -->
 
@@ -341,6 +376,7 @@
   <!-- Sidebar Column -->
   
   <div class="col-md-3" id="sidebar-height">
+      <button id="btn-sidebar-collapse" onclick="hideSidebar()"><img src="/ko-kr/astra-control-center-2204/images/collapse.png" alt="탐색 패널 접기"></button>
       <div class="n-pdf-header">
   <a id="toggleButtonPdf" class="n-pdf-button" type="button">
     <img src="/ko-kr/astra-control-center-2204/images/pdf.png" alt="" width="16" height="16"/>사용 가능한 PDF<span>
@@ -843,156 +879,511 @@
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
 </script><div class="sidebar-nav-container" id="mysidebardiv">
-  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/index.html">
+  <ul id="mysidebar" class="nav"><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Astra Control Center 22.04 문서"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/index.html">
         Astra Control Center 22.04 문서
-      </a></li><li class="subfolders "><a href="/ko-kr/astra-control-center-2204/release-notes/rn_overview.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="릴리스 정보"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="/ko-kr/astra-control-center-2204/release-notes/rn_overview.html">
         <div class="na-navbar-padding"> 릴리스 정보</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/release-notes/whats-new.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Astra Control Center의 이번 릴리스의 새로운 기능"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/release-notes/whats-new.html">
         Astra Control Center의 이번 릴리스의 새로운 기능
-      </a></li><li class="subfolders "><a href="/ko-kr/astra-control-center-2204/release-notes/known-issues.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="알려진 문제"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="/ko-kr/astra-control-center-2204/release-notes/known-issues.html">
         <div class="na-navbar-padding"> 알려진 문제</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/release-notes/known-issues-ads.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Astra Data Store 및 이 Astra Control Center 릴리스와 관련된 알려진 문제입니다"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/release-notes/known-issues-ads.html">
         Astra Data Store 및 이 Astra Control Center 릴리스와 관련된 알려진 문제입니다
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/release-notes/known-limitations.html">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="알려진 제한 사항"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/release-notes/known-limitations.html">
         알려진 제한 사항
-      </a></li></ul></li><li class="subfolders "><a href="#">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="개념"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
         <div class="na-navbar-padding"> 개념</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/concepts/intro.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Astra Control에 대해 알아보십시오"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/concepts/intro.html">
         Astra Control에 대해 알아보십시오
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/concepts/architecture.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="아키텍처 및 구성 요소"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/concepts/architecture.html">
         아키텍처 및 구성 요소
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/concepts/data-protection.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="데이터 보호"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/concepts/data-protection.html">
         데이터 보호
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/concepts/licensing.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="라이센싱"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/concepts/licensing.html">
         라이센싱
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/concepts/validated-vs-standard.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="검증된 vs 표준 애플리케이션"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/concepts/validated-vs-standard.html">
         검증된 vs 표준 애플리케이션
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/concepts/choose-class-and-size.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="스토리지 클래스 및 PV 크기"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/concepts/choose-class-and-size.html">
         스토리지 클래스 및 PV 크기
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/concepts/user-roles-namespaces.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="사용자 역할 및 네임스페이스"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/concepts/user-roles-namespaces.html">
         사용자 역할 및 네임스페이스
-      </a></li></ul></li><li class="subfolders "><a href="#">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="시작하십시오"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
         <div class="na-navbar-padding"> 시작하십시오</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/get-started/requirements.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Astra Control Center 요구 사항"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/get-started/requirements.html">
         Astra Control Center 요구 사항
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/get-started/quick-start.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Astra Control Center를 빠르게 시작합니다"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/get-started/quick-start.html">
         Astra Control Center를 빠르게 시작합니다
-      </a></li><li class="subfolders "><a href="/ko-kr/astra-control-center-2204/get-started/install_overview.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="설치 개요"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="/ko-kr/astra-control-center-2204/get-started/install_overview.html">
         <div class="na-navbar-padding"> 설치 개요</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/get-started/install_acc.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Astra Control Center를 설치합니다"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/get-started/install_acc.html">
         Astra Control Center를 설치합니다
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/get-started/acc_operatorhub_install.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="OpenShift OperatorHub를 사용하여 Astra Control Center를 설치합니다"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/get-started/acc_operatorhub_install.html">
         OpenShift OperatorHub를 사용하여 Astra Control Center를 설치합니다
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/get-started/install_acc-cvo.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cloud Volumes ONTAP 스토리지 백엔드를 사용하여 Astra Control Center를 설치합니다"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/get-started/install_acc-cvo.html">
         Cloud Volumes ONTAP 스토리지 백엔드를 사용하여 Astra Control Center를 설치합니다
-      </a></li></ul></li><li class="subfolders "><a href="/ko-kr/astra-control-center-2204/get-started/setup_overview.html">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Astra Control Center를 설정합니다"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="/ko-kr/astra-control-center-2204/get-started/setup_overview.html">
         <div class="na-navbar-padding"> Astra Control Center를 설정합니다</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/get-started/add-cluster-reqs.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="클러스터 추가를 위한 사전 요구사항"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/get-started/add-cluster-reqs.html">
         클러스터 추가를 위한 사전 요구사항
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/get-started/add-custom-tls-certificate.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="사용자 지정 TLS 인증서를 추가합니다"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/get-started/add-custom-tls-certificate.html">
         사용자 지정 TLS 인증서를 추가합니다
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/get-started/acc-create-podsecuritypolicy.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="사용자 지정 POD 보안 정책을 생성합니다"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/get-started/acc-create-podsecuritypolicy.html">
         사용자 지정 POD 보안 정책을 생성합니다
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/get-started/faq.html">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="FAQ 를 참조하십시오"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/get-started/faq.html">
         FAQ 를 참조하십시오
-      </a></li></ul></li><li class="subfolders "><a href="#">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Astra를 사용하십시오"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
         <div class="na-navbar-padding"> Astra를 사용하십시오</div>
       </a>
-      <ul><li class="subfolders "><a href="#">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="앱 관리"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
         <div class="na-navbar-padding"> 앱 관리</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/manage-apps.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="앱 관리를 시작합니다"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/manage-apps.html">
         앱 관리를 시작합니다
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/define-custom-app.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="사용자 지정 앱을 정의합니다"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/define-custom-app.html">
         사용자 지정 앱을 정의합니다
-      </a></li></ul></li><li class="subfolders "><a href="#">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="앱 보호"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
         <div class="na-navbar-padding"> 앱 보호</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/protection-overview.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="보호 개요"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/protection-overview.html">
         보호 개요
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/protect-apps.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="앱 보호"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/protect-apps.html">
         앱 보호
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/restore-apps.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="앱 복원"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/restore-apps.html">
         앱 복원
-      </a></li><li class="  active "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/clone-apps.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="애플리케이션 클론 복제 및 마이그레이션"
+      data-li-level="3#" 
+      class="  active "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/clone-apps.html">
         애플리케이션 클론 복제 및 마이그레이션
-      </a></li><li class="subfolders "><a href="/ko-kr/astra-control-center-2204/use/execution-hooks.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="앱 실행 후크 관리"
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="/ko-kr/astra-control-center-2204/use/execution-hooks.html">
         <div class="na-navbar-padding"> 앱 실행 후크 관리</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/execution-hook-examples.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="실행 후크 예"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/execution-hook-examples.html">
         실행 후크 예
-      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="앱 및 클러스터 상태 보기"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
         <div class="na-navbar-padding"> 앱 및 클러스터 상태 보기</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/view-dashboard.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="대시보드 요약"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/view-dashboard.html">
         대시보드 요약
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/view-clusters.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="클러스터 상태 및 세부 정보"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/view-clusters.html">
         클러스터 상태 및 세부 정보
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/view-apps.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="앱 상태 및 세부 정보"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/view-apps.html">
         앱 상태 및 세부 정보
-      </a></li></ul></li><li class="subfolders "><a href="#">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="계정을 관리합니다"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
         <div class="na-navbar-padding"> 계정을 관리합니다</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/manage-users.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="사용자 관리"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/manage-users.html">
         사용자 관리
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/manage-roles.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="역할을 관리합니다"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/manage-roles.html">
         역할을 관리합니다
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/manage-notifications.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="알림을 관리합니다"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/manage-notifications.html">
         알림을 관리합니다
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/manage-credentials.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="자격 증명 관리"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/manage-credentials.html">
         자격 증명 관리
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/view-account-activity.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="계정 활동을 모니터링합니다"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/view-account-activity.html">
         계정 활동을 모니터링합니다
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/update-licenses.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="기존 라이센스를 업데이트합니다"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/update-licenses.html">
         기존 라이센스를 업데이트합니다
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/manage-connections.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="리포지토리 연결을 관리합니다"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/manage-connections.html">
         리포지토리 연결을 관리합니다
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/manage-packages-acc.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="소프트웨어 패키지를 관리합니다"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/manage-packages-acc.html">
         소프트웨어 패키지를 관리합니다
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/manage-buckets.html">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="버킷을 관리합니다"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/manage-buckets.html">
         버킷을 관리합니다
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/manage-backend.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="스토리지 백엔드를 관리합니다"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/manage-backend.html">
         스토리지 백엔드를 관리합니다
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/monitor-protect.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="인프라 모니터링 및 보호"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/monitor-protect.html">
         인프라 모니터링 및 보호
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/unmanage.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="앱 및 클러스터 관리를 취소합니다"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/unmanage.html">
         앱 및 클러스터 관리를 취소합니다
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/upgrade-acc.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Astra Control Center를 업그레이드합니다"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/upgrade-acc.html">
         Astra Control Center를 업그레이드합니다
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/uninstall_acc.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Astra Control Center를 제거합니다"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/use/uninstall_acc.html">
         Astra Control Center를 제거합니다
-      </a></li></ul></li><li class="subfolders "><a href="#">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="REST API를 사용하여 자동화"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
         <div class="na-navbar-padding"> REST API를 사용하여 자동화</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/rest-api/api-intro.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="소개"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/rest-api/api-intro.html">
         소개
-      </a></li></ul></li><li class="subfolders "><a href="#">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="애플리케이션 구축"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
         <div class="na-navbar-padding"> 애플리케이션 구축</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/solutions/jenkins-deploy-from-helm-chart.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Jenkins를 배포합니다"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/solutions/jenkins-deploy-from-helm-chart.html">
         Jenkins를 배포합니다
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/solutions/mariadb-deploy-from-helm-chart.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="MariaDB 배포"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/solutions/mariadb-deploy-from-helm-chart.html">
         MariaDB 배포
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/solutions/mysql-deploy-from-helm-chart.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="MySQL 배포"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/solutions/mysql-deploy-from-helm-chart.html">
         MySQL 배포
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/solutions/postgres-deploy-from-helm-chart.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Postgres를 배포합니다"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/solutions/postgres-deploy-from-helm-chart.html">
         Postgres를 배포합니다
-      </a></li></ul></li><li class="subfolders "><a href="#">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="지식 및 지원"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
         <div class="na-navbar-padding"> 지식 및 지원</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/support/troubleshooting-acc.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="문제 해결"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/support/troubleshooting-acc.html">
         문제 해결
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/support/get-help.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="도움을 받으십시오"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/support/get-help.html">
         도움을 받으십시오
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/acc-earlier-versions.html">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="이전 버전"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/acc-earlier-versions.html">
         이전 버전
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/legal-notices.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="법적 고지"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2204/legal-notices.html">
         법적 고지
       </a></li></ul>
 </div>
@@ -1005,14 +1396,16 @@
 </script>
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
+<script>$("#mysidebar li.active").parents('ul').css("display","block");</script>
 
 
   </div>
   
 
   <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
-    <!-- Begin of page container --><article class="page-content">
+    <!-- Begin of page container --><article class="page-content" id="main">
       <div class="ie-utility">
+  <button id="btn-sidebar-expand" onclick="showSidebar()"><img src="/ko-kr/astra-control-center-2204/images/expand.png" alt="탐색 패널 펼치기"></button>
   <div class="ie-menu">
     <div class="n-breadcrumb">
       <ul class="n-breadcrumb__list">
@@ -1216,11 +1609,7 @@
         <div class="n-footer__copyright">
           <ul class="n-footer__copyright-list">
             <li class="n-footer__copyright-link">
-              <span class="n-footer__fine-print">웹 사이트에 대한 피드백이 있으십니까?</span>
-              <a target="_self" href="javascript:netapp_mailto()">의견을 공유해 주십시오</a>
-            </li>
-            <li class="n-footer__copyright-link">
-              <a href="https://docs.netapp.com/ko-kr/announcements/">공지 사항</a>
+              <a target="_self" href="javascript:netapp_mailto()">이 페이지에 대한 피드백 보내기</a>
             </li>
           </ul>
         </div>
