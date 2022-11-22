@@ -69,12 +69,12 @@ NOTE: Helm 2와 함께 설치된 앱은 지원되지 않습니다.
 
 * 앱 관리
 +
-** <<Manage apps by namespace>>
-** <<Manage apps by Kubernetes label>>
+**  apps by namespace
+**  apps by Kubernetes label
 
 
-* <<Ignore apps>>
-* <<Unmanage apps>>
+*  apps
+*  apps
 
 
 
