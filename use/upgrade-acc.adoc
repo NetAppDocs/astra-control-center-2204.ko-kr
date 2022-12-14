@@ -13,7 +13,7 @@ summary: Astra Control Center를 업그레이드하려면 설명된 단계에 �
 
 Astra Control Center를 업그레이드하려면 NetApp Support 사이트에서 설치 번들을 다운로드하고 해당 지침에 따라 Astra Control Center 구성 요소를 업그레이드하십시오. 이 절차를 사용하여 인터넷에 연결되거나 공기가 연결된 환경에서 Astra Control Center를 업그레이드할 수 있습니다.
 
-.무엇을 &#8217;필요로 할거야
+.필요한 것
 * link:../get-started/requirements.html["업그레이드를 시작하기 전에 운영 환경이 Astra Control Center 배포에 대한 최소 요구 사항을 충족하는지 확인하십시오"].
 * 모든 클러스터 운영자가 양호한 상태이며 사용 가능한지 확인합니다.
 +
@@ -36,16 +36,17 @@ oc get apiservices
 * Astra Control Center에서 로그아웃합니다.
 
 
+.이 작업에 대해
 Astra Control Center 업그레이드 프로세스는 다음과 같은 고급 단계를 안내합니다.
 
-*  the Astra Control Center bundle
-*  the bundle and change directory
-*  the images to your local registry
-*  the updated Astra Control Center operator
-*  Astra Control Center
-*  third-party services (Optional)
-*  system status
-*  up ingress for load balancing
+* <<Astra Control Center 번들을 다운로드합니다>>
+* <<번들의 포장을 풀고 디렉토리를 변경합니다>>
+* <<이미지를 로컬 레지스트리에 추가합니다>>
+* <<업데이트된 Astra Control Center 운영자를 설치합니다>>
+* <<Astra Control Center를 업그레이드합니다>>
+* <<타사 서비스 업그레이드(선택 사항)>>
+* <<시스템 상태를 확인합니다>>
+* <<부하 분산을 위한 수신 설정>>
 
 
 
@@ -143,8 +144,8 @@ vim astra_control_center_operator_deploy.yaml
 imagePullSecrets:
 - name: <name_of_secret_with_creds_to_local_registry>
 ----
-.. kuby-RBAC-proxy 이미지의 [your_registry_path]를 이미지를 에서 푸시한 레지스트리 경로로 변경합니다 ,이전 단계.
-.. "acc-operator-controller-manager" 이미지의 [your_registry_path]를 이미지를 에서 푸시한 레지스트리 경로로 변경합니다 ,이전 단계.
+.. kuby-RBAC-proxy 이미지의 [your_registry_path]를 이미지를 에서 푸시한 레지스트리 경로로 변경합니다 <<substep_image_local_registry_push,이전 단계>>.
+.. "acc-operator-controller-manager" 이미지의 [your_registry_path]를 이미지를 에서 푸시한 레지스트리 경로로 변경합니다 <<substep_image_local_registry_push,이전 단계>>.
 .. 다음 값을 'env' 섹션에 추가합니다.
 +
 [listing]
@@ -239,7 +240,7 @@ kubectl edit acc -n [netapp-acc or custom namespace]
 ----
 +
 
-NOTE: 레지스트리 경로는 에서 이미지를 푸시한 레지스트리 경로와 일치해야 합니다 ,이전 단계.
+NOTE: 레지스트리 경로는 에서 이미지를 푸시한 레지스트리 경로와 일치해야 합니다 <<substep_image_local_registry_push,이전 단계>>.
 
 . Astra Control Center CR의 '서펙' 안에 있는 additionalValues에 다음 줄을 추가합니다.
 +
@@ -369,7 +370,7 @@ NOTE: "로드 밸런서" 및 수신 서비스 유형에 대한 자세한 내용�
 * OpenShift 수신 컨트롤러
 
 
-.무엇을 &#8217;필요로 할거야
+.필요한 것
 * CR 사양에서
 +
 ** CRD.externalTraefik가 있으면 FALSE 또는 로 설정해야 합니다
@@ -382,7 +383,7 @@ NOTE: "로드 밸런서" 및 수신 서비스 유형에 대한 자세한 내용�
 
 
 .Nginx 수신 컨트롤러 단계
-. 기존 비밀의 'Secure-testing-cert'를 사용하거나 비밀로 만든다 http://kubernetes.io/tls["쿠버네티스 IO/TLS"] 에 설명된 대로 "NetApp-acc"(또는 사용자 지정 이름) 네임스페이스의 TLS 개인 키 및 인증서 https://kubernetes.io/docs/concepts/configuration/secret/#tls-secrets["TLS 비밀"].
+. 기존 비밀의 'Secure-testing-cert'를 사용하거나 비밀로 만든다 http://kubernetes.io/tls["8a637503539b25b68130b6e8003579d9"] 에 설명된 대로 "NetApp-acc"(또는 사용자 지정 이름) 네임스페이스의 TLS 개인 키 및 인증서 https://kubernetes.io/docs/concepts/configuration/secret/#tls-secrets["TLS 비밀"].
 . 더 이상 사용되지 않거나 새로운 스키마를 위해 'NetApp-acc'(또는 사용자 지정 이름) 네임스페이스에 ingress 리소스를 배포합니다.
 +
 .. 더 이상 사용되지 않는 스키마의 경우 다음 샘플을 따르십시오.
