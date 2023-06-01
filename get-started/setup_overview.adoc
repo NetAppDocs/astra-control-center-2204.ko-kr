@@ -24,7 +24,7 @@ Astra Control Center는 스토리지 백엔드로 ONTAP 및 Astra 데이터 저�
 
 == Astra Control Center에 대한 라이센스를 추가합니다
 
-UI 또는 를 사용하여 새 라이센스를 추가할 수 있습니다 https://docs.netapp.com/us-en/astra-automation/index.html["API를 참조하십시오"^] Astra Control Center의 모든 기능을 활용할 수 있습니다. 라이센스가 없으면 Astra Control Center의 사용은 사용자 관리 및 새 클러스터 추가로 제한됩니다.
+UI 또는 를 사용하여 새 라이센스를 추가할 수 있습니다 https://docs.netapp.com/us-en/astra-automation-2204/index.html["API를 참조하십시오"^] Astra Control Center의 모든 기능을 활용할 수 있습니다. 라이센스가 없으면 Astra Control Center의 사용은 사용자 관리 및 새 클러스터 추가로 제한됩니다.
 
 라이선스 계산 방법에 대한 자세한 내용은 을 참조하십시오 link:../concepts/licensing.html["라이센싱"].
 
@@ -348,6 +348,6 @@ Astra Control Center에 로그인하고 클러스터를 추가했으므로 이�
 [discrete]
 == 자세한 내용을 확인하십시오
 
-* https://docs.netapp.com/us-en/astra-automation/index.html["Astra Control API를 사용합니다"^]
+* https://docs.netapp.com/us-en/astra-automation-2204/index.html["Astra Control API를 사용합니다"^]
 * link:../release-notes/known-issues.html["알려진 문제"]
 

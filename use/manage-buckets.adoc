@@ -33,7 +33,7 @@ NOTE: Astra Control Center는 Amazon S3를 일반 S3 버킷 공급자로 지원�
 * 제거: 현재 버킷에 접근할 수 없습니다.
 
 
-Astra Control API를 사용하여 버킷을 관리하는 방법에 대한 지침은 을 참조하십시오 link:https://docs.netapp.com/us-en/astra-automation/["Astra 자동화 및 API 정보"^].
+Astra Control API를 사용하여 버킷을 관리하는 방법에 대한 지침은 을 참조하십시오 link:https://docs.netapp.com/us-en/astra-automation-2204/["Astra 자동화 및 API 정보"^].
 
 버킷 관리와 관련된 다음 작업을 수행할 수 있습니다.
 
@@ -97,7 +97,7 @@ TIP: Astra Control에 추가하는 첫 번째 자격 증명 세트는 항상 사
 
 NOTE: 활성 버킷 자격 증명을 제거하는 경우 를 참조하십시오 https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Astra/Deleting_active_S3_bucket_credentials_leads_to_spurious_500_errors_reported_in_the_UI["버킷 자격 증명 제거 문제 해결"].
 
-Astra Control API를 사용하여 S3 자격 증명을 제거하는 방법에 대한 지침은 을 참조하십시오 link:https://docs.netapp.com/us-en/astra-automation/["Astra 자동화 및 API 정보"^].
+Astra Control API를 사용하여 S3 자격 증명을 제거하는 방법에 대한 지침은 을 참조하십시오 link:https://docs.netapp.com/us-en/astra-automation-2204/["Astra 자동화 및 API 정보"^].
 
 
 
@@ -130,5 +130,5 @@ NOTE: Astra Control은 먼저 버킷에 백업을 사용하는 스케줄 정책�
 
 == 자세한 내용을 확인하십시오
 
-* https://docs.netapp.com/us-en/astra-automation/index.html["Astra Control API를 사용합니다"^]
+* https://docs.netapp.com/us-en/astra-automation-2204/index.html["Astra Control API를 사용합니다"^]
 

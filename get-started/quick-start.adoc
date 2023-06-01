@@ -65,5 +65,5 @@ link:../get-started/install_overview.html["Astra Control Center를 설치합니�
 
 == 자세한 내용을 확인하십시오
 
-* https://docs.netapp.com/us-en/astra-automation/index.html["Astra Control API를 사용합니다"^]
+* https://docs.netapp.com/us-en/astra-automation-2204/index.html["Astra Control API를 사용합니다"^]
 
