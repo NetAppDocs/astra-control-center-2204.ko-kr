@@ -344,11 +344,11 @@ RedHat OpenShift 클러스터와 NetApp Cloud Manager Connector를 설치할 수
 
 그런 다음 가상 네트워크를 만들고, 컴퓨팅 인스턴스를 설정하고, Azure Blob 컨테이너를 만들고, Astra Control Center 이미지를 호스팅하기 위해 ACR(Azure Container Register)을 만들고, 이 레지스트리로 이미지를 푸시하도록 Azure를 구성합니다.
 
-Azure 설명서에 따라 다음 단계를 완료합니다. 을 참조하십시오 https://docs.openshift.com/container-platform/4.8/installing/installing_aws/installing-azure-default.html["Azure에 OpenShift 클러스터 설치"^].
+Azure 설명서에 따라 다음 단계를 완료합니다. 을 참조하십시오 https://docs.openshift.com/["Azure에 OpenShift 클러스터 설치"^].
 
 . Azure 가상 네트워크를 생성합니다.
 . 컴퓨팅 인스턴스를 검토합니다. Azure의 베어 메탈 서버 또는 VM이 될 수 있습니다.
-. 인스턴스 유형이 마스터 및 작업자 노드에 대한 Astra 최소 리소스 요구 사항과 일치하지 않으면 Azure의 인스턴스 유형을 Astra 요구 사항에 맞게 변경합니다. 을 참조하십시오 link:../get-started/requirements.html["Astra Control Center 요구 사항"].
+. 인스턴스 유형이 마스터 및 작업자 노드에 대한 Astra 최소 리소스 요구 사항과 일치하지 않으면 Azure의 인스턴스 유형을 Astra 요구 사항에 맞게 변경합니다.  을 참조하십시오 link:../get-started/requirements.html["Astra Control Center 요구 사항"].
 . 백업을 저장할 Azure Blob 컨테이너를 하나 이상 생성합니다.
 . 저장소 계정을 생성합니다. Astra Control Center에서 버킷으로 사용할 컨테이너를 생성하려면 저장소 계정이 필요합니다.
 . 버킷 액세스에 필요한 암호를 생성합니다.

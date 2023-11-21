@@ -15,7 +15,7 @@ summary: 제어 차트에서 Postgres를 배포하는 방법에 대해 알아봅
 
 Postgres는 Astra에 대해 검증된 앱입니다.
 
-* https://docs.netapp.com/us-en/astra-control-center-2204/concepts/validated-vs-standard.html#validated-apps["Astra Control에서 검증된 앱과 표준 앱의 차이점을 알아보십시오"^].
+* link:../concepts/validated-vs-standard.html#validated-apps["Astra Control에서 검증된 앱과 표준 앱의 차이점을 알아보십시오"^].
 
 
 이 지침은 Astra Control Service 및 Astra Control Center에 모두 적용됩니다.

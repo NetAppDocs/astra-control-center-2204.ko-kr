@@ -1108,11 +1108,8 @@
   <block id="ac5af645cec8d25669a5a9893f571bcc" category="paragraph">을 참조하십시오<block ref="47e48c38bbba09ad0234959e4f70e6b5" category="inline-link-rx"></block>.</block>
   <block id="ffe7dbf60b2fbe9ee35b02eca9bedb83" category="section-title">Azure를 구성합니다</block>
   <block id="daee2a4caddb0f1fced149c9b185ab3e" category="paragraph">그런 다음 가상 네트워크를 만들고, 컴퓨팅 인스턴스를 설정하고, Azure Blob 컨테이너를 만들고, Astra Control Center 이미지를 호스팅하기 위해 ACR(Azure Container Register)을 만들고, 이 레지스트리로 이미지를 푸시하도록 Azure를 구성합니다.</block>
-  <block id="310c2720a5523c6a1f55532ee951393c" category="paragraph">Azure 설명서에 따라 다음 단계를 완료합니다. 을 참조하십시오<block ref="604df1e02f9d2d76a67db6e61299339e" category="inline-link-rx"></block>.</block>
   <block id="52393bb21023d79ef4e0fa374e54b83d" category="list-text">Azure 가상 네트워크를 생성합니다.</block>
   <block id="d03589157dd63e1aaf5497955f5058f5" category="list-text">컴퓨팅 인스턴스를 검토합니다. Azure의 베어 메탈 서버 또는 VM이 될 수 있습니다.</block>
-  <block id="b82f3e0352c4295f8db3114c4d861a92" category="inline-link-macro">Astra Control Center 요구 사항</block>
-  <block id="8a803e817d15e18f4c26de7531681f8c" category="list-text">인스턴스 유형이 마스터 및 작업자 노드에 대한 Astra 최소 리소스 요구 사항과 일치하지 않으면 Azure의 인스턴스 유형을 Astra 요구 사항에 맞게 변경합니다. 을 참조하십시오 <block ref="69ebc365ae107089b5acea91d6e6ce3d" category="inline-link-macro-rx"></block>.</block>
   <block id="5df56ab7fcd23252a7ac4c7a21742e57" category="list-text">백업을 저장할 Azure Blob 컨테이너를 하나 이상 생성합니다.</block>
   <block id="307374e80fc7db1b05d765029543d9c8" category="list-text">저장소 계정을 생성합니다. Astra Control Center에서 버킷으로 사용할 컨테이너를 생성하려면 저장소 계정이 필요합니다.</block>
   <block id="a9d92f56cc3dae134fc1ee53e8136378" category="list-text">버킷 액세스에 필요한 암호를 생성합니다.</block>
@@ -2251,7 +2248,6 @@
   <block id="49ffba9fa4ce5bf749cec20def44c0b9" category="paragraph">설치 지침은 의 RedHat 설명서를 참조하십시오<block ref="2b5694f45e8e8a8a0bd04ce92001fd2c" category="inline-link-rx"></block> 및<block ref="b57239f3f933c36abb901cdf3e168d8f" category="inline-link-rx"></block>.</block>
   <block id="d7e8ec4ac03380f7360b24b84e02bc2c" category="paragraph"><block ref="d7e8ec4ac03380f7360b24b84e02bc2c" category="inline-link-rx"></block></block>
   <block id="038aa329e12ca1821545cf4a1d938aed" category="inline-link">Astra Control에서 검증된 앱과 표준 앱의 차이점을 알아보십시오</block>
-  <block id="d5a3fd1c4ff9b924b82909f1b645bee8" category="list-text"><block ref="a3e4ce46068122a9dbb346a32a7b154f" category="inline-link-rx"></block>.</block>
   <block id="762ef43b4a11a511c62b8a4849953db5" category="paragraph">자동화된 보호 정책을 사용하거나 필요에 따라 스냅샷과 백업을 생성하여 앱을 보호합니다. Astra UI 또는 를 사용할 수 있습니다<block ref="414551f2d63a329d9ffea01809d18802" category="inline-link-rx"></block> 앱을 보호합니다.</block>
   <block id="f51de799c9cfab0438048b54a72c2933" category="admonition">실행 중인 백업을 중지할 방법은 없습니다. 백업을 삭제해야 하는 경우 백업이 완료될 때까지 기다린 다음 의 지침을 따르십시오 <block ref="da28e1f6ad1e5135aab14ac0664600c6" category="inline-xref-macro-rx"></block>. 실패한 백업을 삭제하려면<block ref="dd68bc92887523be75ee7ba01b4bcb4b" category="inline-link-rx"></block>.</block>
   <block id="4f1044e2106e85477990284013da9865" category="admonition">실행 중인 백업을 중지할 방법은 없습니다. 백업을 삭제해야 하는 경우 백업이 완료될 때까지 기다린 후 다음 지침을 따르십시오. 실패한 백업을 삭제하려면<block ref="dd68bc92887523be75ee7ba01b4bcb4b" category="inline-link-rx"></block>.</block>
@@ -2274,4 +2270,8 @@
   <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="56601abf9be7a15a9263f590e5b72309" category="paragraph">Azure 설명서에 따라 다음 단계를 완료합니다. 을 참조하십시오<block ref="9ba71785f6bcafa8653bf6ebf2656742" category="inline-link-rx"></block>.</block>
+  <block id="802adae5487ced22b70180d969f7750c" category="list-text">인스턴스 유형이 마스터 및 작업자 노드에 대한 Astra 최소 리소스 요구 사항과 일치하지 않으면 Azure의 인스턴스 유형을 Astra 요구 사항에 맞게 변경합니다.  을 참조하십시오 <block ref="a41c664e3d2520e4c4deb907d0286272" category="inline-link-macro-rx"></block>.</block>
+  <block id="4d7203e3cc3e9782de01bf1c152c7952" category="list-text"><block ref="bb1d5de9fc6b24a8ee91128103dfdee9" category="inline-link-macro-rx"></block>.</block>
+  <block id="f04289013cb8b30466cb952e21a82c10" category="sidebar">Astra Control Center 22.04 문서</block>
 </blocks>
